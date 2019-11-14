@@ -31,7 +31,7 @@ Suppose **$OPENCV_INSTALL_DIR** is the OpenCV installation directory.
 
 Add
 
-`set(OpenCV_DIR `**$OPENCV_INSTALL_DIR**`/lib/cmake/opencv4)`
+`set(OpenCV_DIR $OPENCV_INSTALL_DIR/lib/cmake/opencv4)`
 
 inside the __CMakeLists.txt__ soon after line 4.
 
@@ -41,6 +41,6 @@ On VSC replace
 
 with
 
-`"`**$OPENCV_INSTALL_DIR**`/include/opencv4"`
+`"$OPENCV_INSTALL_DIR/include/opencv4"`
 
 inside the __c_cpp_properties.json__ `includePath` field.
