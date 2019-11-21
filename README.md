@@ -1,5 +1,7 @@
 # Politocean Vision
 
+## C++
+
 In VSC open the project folder and insert into the `includePath` field of the __c_cpp_properties.json__ (`CTRL+SHIFT+P` and then `C/C++: Edit Configurations (JSON)`)
 
 ```json
@@ -11,7 +13,7 @@ In VSC open the project folder and insert into the `includePath` field of the __
 
 To build, inside the project folder
 
-```bat
+```bash
 mkdir build
 cd build
 
@@ -21,26 +23,45 @@ make
 
 To run
 
-```bat
+```bash
 ./PolitoceanShapes
 ```
 
-## If OpenCV is not system installed
+## Python
 
-Suppose **$OPENCV_INSTALL_DIR** is the OpenCV installation directory.
+Install pip for Python3
 
-Add
+```bash
+sudo apt update
+sudo apt install python3-pip
+```
 
-`set(OpenCV_DIR `**$OPENCV_INSTALL_DIR**`/lib/cmake/opencv4)`
+Install virtualenv using pip3
 
-inside the __CMakeLists.txt__ soon after line 4.
+```bash
+sudo pip3 install virtualenv
+```
 
-On VSC replace
+Create a Python virtual environment for your OpenCV project and activate it
 
-`"/usr/local/include/opencv4"`
+```bash
+cd opencv_project
+virtualenv venv
+source venv/bin/activate
+pip3 install opencv-contrib-python
+```
 
-with
+To test that everything goes right
 
-`"`**$OPENCV_INSTALL_DIR**`/include/opencv4"`
+```bash
+python3
+>>> import cv2
+>>> cv2.__version__
+'4.1.1'
+```
 
-inside the __c_cpp_properties.json__ `includePath` field.
+To deactivate the virtual environment run inside the project root
+
+```bash
+source venv/bin/deactivate
+```
