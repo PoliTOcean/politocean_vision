@@ -51,7 +51,7 @@ source venv/bin/activate
 pip3 install opencv-contrib-python
 ```
 
-To test that everything goes right
+To test that everything went well
 
 ```bash
 python3
