@@ -42,9 +42,10 @@ Install virtualenv using pip3
 sudo pip3 install virtualenv
 ```
 
-Create a Python virtual environment for your OpenCV project and activate it
+Create a Python virtual environment in your developer directory for your OpenCV project and activate it
 
 ```bash
+mkdir opencv_project
 cd opencv_project
 virtualenv venv
 source venv/bin/activate
