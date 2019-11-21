@@ -59,6 +59,7 @@ python3
 >>> import cv2
 >>> cv2.__version__
 '4.1.1'
+>>> exit()
 ```
 
 To deactivate the virtual environment run inside the project root
