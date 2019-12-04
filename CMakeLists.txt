@@ -15,6 +15,6 @@ find_package(OpenCV REQUIRED)
 
 include_directories(include)
 
-add_executable(PolitoceanShapes src/PolitoceanShapes.cpp)
+add_executable(Line src/main.cpp)
 
-target_link_libraries(PolitoceanShapes ${OpenCV_LIBS})
+target_link_libraries(Line ${OpenCV_LIBS})
