@@ -17,5 +17,11 @@ include_directories(include)
 add_subdirectory(libs/capture)
 
 add_executable(Line src/main.cpp)
-
 target_link_libraries(Line ${OpenCV_LIBS})
+
+add_executable(Shape src/shae.cpp)
+target_link_libraries(Shape ${OpenCV_LIBS}
+  PolitoceanVision::capture
+)
+
+
