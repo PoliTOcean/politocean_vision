@@ -16,8 +16,6 @@ find_package(OpenCV REQUIRED)
 include_directories(include)
 add_subdirectory(libs/capture)
 
+add_executable(Line src/main.cpp)
 
-add_executable(Video video.cpp)
-target_link_libraries(Video ${OpenCV_LIBS}
-  PolitoceanVision::capture
-)
+target_link_libraries(Line ${OpenCV_LIBS})
