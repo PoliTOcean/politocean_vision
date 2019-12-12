@@ -14,7 +14,10 @@ endif()
 find_package(OpenCV REQUIRED)
 
 include_directories(include)
+add_subdirectory(libs/capture)
 
-add_executable(PolitoceanShapes src/PolitoceanShapes.cpp)
 
-target_link_libraries(PolitoceanShapes ${OpenCV_LIBS})
+add_executable(Video video.cpp)
+target_link_libraries(Video ${OpenCV_LIBS}
+  PolitoceanVision::capture
+)
