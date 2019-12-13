@@ -19,8 +19,13 @@ add_subdirectory(libs/capture)
 add_executable(Line src/main.cpp)
 target_link_libraries(Line ${OpenCV_LIBS})
 
-add_executable(Shape src/shae.cpp)
+add_executable(Shape src/shape.cpp)
 target_link_libraries(Shape ${OpenCV_LIBS}
+  PolitoceanVision::capture
+)
+
+add_executable(Grabcut src/grabcut.cpp)
+target_link_libraries(Grabcut ${OpenCV_LIBS}
   PolitoceanVision::capture
 )
 
