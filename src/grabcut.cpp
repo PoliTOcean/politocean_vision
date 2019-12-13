@@ -27,6 +27,7 @@ static void getBinMask(const Mat &comMask, Mat &binMask)
         binMask.create(comMask.size(), CV_8UC1);
     binMask = comMask & 1;
 }
+
 class Grabcut
 {
 public:
@@ -195,6 +196,7 @@ void Grabcut::mouseClick(int event, int x, int y, int flags, void *)
             lblsState = SET;
         }
         break;
+
     case EVENT_MOUSEMOVE:
         if (rectState == IN_PROCESS)
         {
@@ -212,6 +214,7 @@ void Grabcut::mouseClick(int event, int x, int y, int flags, void *)
         break;
     }
 }
+
 int Grabcut::nextIter()
 {
     Mat frame = cap.getFrame();
@@ -234,6 +237,7 @@ int Grabcut::nextIter()
     prFgdPxls.clear();
     return iterCount;
 }
+
 Grabcut gc;
 
 static void on_mouse(int event, int x, int y, int flags, void *param)
